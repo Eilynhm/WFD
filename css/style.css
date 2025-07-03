@@ -1,0 +1,1217 @@
+*{margin:0; padding:0;}
+
+header, nav, main, aside, article, section, footer, div{
+    display: block;
+}
+
+#wrapper{
+    margin:0px 32px;
+}
+
+body {
+    background-color: #FFFFF4;
+}
+
+header {
+    margin: 32px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#logo {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    width: max-content;
+    height: 80px;      
+    margin-top: 0;         
+}
+
+
+#logo span {
+    font-family: "Inknut Antiqua", serif;
+    color: #E45B29;
+    font-size: 24px;
+    letter-spacing: 6px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #E45B29;
+}
+
+
+
+
+#topbar a{
+    font-family: "Inknut Antiqua", serif;
+    color: #E45B29;
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 62px;
+}
+#topbar a:hover {
+    font-weight: bold;
+}
+#topbar #left-side img {
+    cursor: pointer; /* curseur main au survol */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#topbar #left-side img:hover {
+    transform: scale(1.1); /* zoom léger */
+    filter: darkness(5.2); /* un peu plus clair */
+}
+
+#topbar {
+    margin-left: 125px;
+    display: flex;
+    align-items: center;
+    gap: 62px;
+}
+#left-side {
+    display: flex;      /* pour aligner les images sur une ligne */
+    gap: 20px;          /* espace horizontal entre les images */
+    margin-left: 300px; /* si tu veux garder ce décalage */
+}
+
+#text {
+    display: flex;
+    margin-top: 120px;
+    margin-left: 32px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#text span{
+    display: flex;
+    font-family: "DM Serif Text", serif;
+    font-size: 48px;
+    color: #E45B29;;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 96px;
+}
+
+#text p{
+    font-family: "Inknut Antiqua", serif;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#second-part{
+    margin-top: 32px;
+}
+
+#second-part span{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    color: #612999;
+    display: block;
+}
+
+#second-part p{
+    margin-top: 32px;
+    font-family: 'Rubik', sans-serif;
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 141%;
+}
+
+
+.content-rec {
+    margin-top: 32px;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    color: #612999;
+    font-size: 40px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    font-weight: 500;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 100px;
+    margin:0px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #E0D4C2;
+    width: 283px;
+    height: 369px;
+    position: relative; /* C’est essentiel */
+    overflow: hidden; /* Facultatif, mais empêche les débordements */
+  }
+    .price-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CEAA73;
+    opacity: 0.48;
+    width: 143.96px;
+    height:31.13px;
+    margin-left: 69.47px;
+    margin-top: 9.16px;
+  }
+  
+  
+.price-text button{
+  all: unset;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size:16px;
+  color: #000000;
+  font-weight: 400;
+}
+
+
+.card-image {
+    /* background-color: rgb(255, 0, 50); */
+    width: 210px;
+    height: 235px;
+    margin-left: 37px;
+    margin-top: 23px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    margin-top: 9.16px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-title h2 {
+    color: #000000;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: justify;
+
+
+}
+
+#second-part {
+    width: 100%;
+    height: 553px;
+    background-color: #F9D8C3;
+    color: #2E2E2E;
+    margin-top: 147px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    gap: 60px;
+}
+
+#second-part img {
+    width: 404px;
+    height: 472px;
+    object-fit: cover;
+}
+
+#second-part .text-block {
+    max-width: 600px;
+}
+
+#second-part p {
+    font-family: "Inria Serif", serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+
+.heart {
+    background-color: #CEAA73;
+    border-radius: 50px;
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 35px;
+    right: 42px;
+}
+
+.heart img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#third-part {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFF4;
+    padding: 20px 0;    /* réduit le padding vertical */
+    margin-top: 20px;   /* réduit la marge */
+    position: relative;
+}
+
+#third-part .spoon img {
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+}
+
+#third-part .fork img {
+    width: 400px;
+    height: auto;
+    margin-right: 0;
+}
+
+.center-content {
+    text-align: center;
+    flex: 1;
+}
+
+.center-content p {
+    margin-bottom: 5px;   /* réduit la marge */
+    font-family: "DM Serif Text", serif;
+    font-size: 48px;
+    font-weight: 100;
+    color: #000;
+}
+
+.center-content button {
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: "DM Serif Text", serif;
+    padding: 6px 40px;    /* réduit la hauteur du bouton */
+    background-color: #e0dede;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.center-content button:hover {
+    background-color: #d1cccc;
+}
+
+
+footer{
+    background-color: #EFE3D8;
+   /* margin-top: 50px;*/
+}
+
+
+footer h1{
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #FFFFF4;
+}
+
+footer ul{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFF4;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 150px;
+
+}
+
+a, a:visited, a:hover, a:link {
+    text-decoration: none;
+    color: #d8add3;
+}
+
+footer li{
+    margin-bottom: 8px;
+}
+
+#footer-sec{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 32px;
+}
+
+#icons{
+    color: #FFFFF4;;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 32px;
+    margin-top: 24px;
+}
+
+#icons img{
+    margin-right: 24px;
+}
+
+#name p{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFF4;
+    margin-top: 16px;
+    margin-left: 32px;
+    padding-bottom: 51px;
+}
+
+
+
+/*RECIPE BOOK PAGE */
+  .custom-navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .custom-search {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .custom-search input[type="search"] {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #CEAA73;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+
+  .custom-search button {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #CEAA73;
+    border: 1px solid #CEAA73;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+
+
+  .custom-search input[type="search"] {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #CEAA73;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #FFFFF4;
+}
+
+
+  .custom-search button:hover {
+    background-color: #CEAA73;
+    color: #FFFFF4;
+  }
+
+
+.container4 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 100px;
+  margin: 20px 32px;
+  justify-content: center; /* centre horizontalement les lignes */
+  align-items: flex-start; /* aligne cartes en haut */
+}
+
+/* Chaque card a largeur fixe */
+.card {
+  background-color: #E0D4C2;
+  width: 283px;       /* largeur fixe */
+  height: 369px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/*FROM THE FRIDGE PAGE */
+#fruity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFF4;
+  padding: 0;
+  min-height: 100vh; /* prend toute la hauteur visible */
+}
+
+
+#part1,
+#part2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+#part2{
+    margin-top: 100px;
+    padding: 0;
+}
+
+#fruity img {
+  display: block;
+  /* ✨ plus petit pour réduire la hauteur de la page */
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tailles personnalisées (peut être ajusté ensuite) */
+.kiwi img{
+  width: 300px;
+}
+
+.figue img{
+  width: 250px;
+}
+
+.rasberry img {
+  width: 300px;
+}
+
+.kale img {
+  width: 300px;
+}
+.chocolate img {
+  width: 350px;
+}
+
+/* Search bar sans espace autour */
+.center-content2 {
+  margin: 0;
+  padding: 0;
+}
+
+.floating-title {
+  position: absolute;
+  top: 300px; /* ajuste selon ton besoin */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  font-family: "DM Serif Text", serif;
+  color: #E45B29;
+  font-size: 50px;
+  text-align: center;
+}
+
+
+
+
+/*another search bar*/
+
+.custom-navbar2 {
+  z-index: 1000;
+  position: absolute;
+  top: 500px; /* ou autre selon où tu veux qu’elle s’affiche */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+    margin: 0;
+  padding: 0;
+}
+
+
+  .custom-search2 {
+    display: flex;
+    max-width: 1000px;
+    width: 150%;
+    margin: 0 ;
+    padding: 0;
+  }
+
+  .custom-search2 input[type="search"] {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #CEAA73;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+
+  .custom-search2 button {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #CEAA73;
+    border: 1px solid #CEAA73;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+
+
+  .custom-search2 input[type="search"] {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #CEAA73;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #FFFFF4;
+}
+
+
+  .custom-search2 button:hover {
+    background-color: #CEAA73;
+    color: #FFFFF4;
+  }
+
+/*profile page*/
+
+#avatar {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+}
+
+#option-prof {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+#option-prof button,
+#option-prof .btn-link {
+    margin-top: 30px;
+    padding: 6px 40px;
+    border: 2px solid #E45B29;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#option-prof button:hover,
+#option-prof .btn-link:hover {
+    background-color: #e45b293f;
+}
+
+#option-prof p {
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+    color: #E45B29;
+    margin: 0;
+}
+
+
+
+
+
+.tabs {
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  font-family: "DM Serif Text", serif;
+  color: #E45B29;
+  font-size: 30px;
+}
+
+.tab-btn.active {
+  border-bottom: 3px solid #E45B29;
+   background-color: transparent; 
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+
+/*login page*/
+
+#login {
+    width: 662px;
+    height: 500.81px;
+    background-color: #f2ae8ebb;
+    border-radius: 10px;
+    margin: 170px auto;  /* marge en haut/bas = 100px, gauche/droite = auto pour centrer */
+    display: flex;       /* si tu veux que le contenu interne soit en flex */
+    justify-content: center;
+    align-items: center; /* centre verticalement le contenu interne */
+}
+
+.prof {
+    background-color: #f2ae8ee4;
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    position: absolute;
+    top: 220px; /* ajuste selon ton besoin */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    font-family: "DM Serif Text", serif;
+    color: #E45B29;
+    font-size: 50px;
+    text-align: center;
+}
+
+.prof img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.form-container {
+  max-width: 800px;
+  margin: 70px auto 30px auto;
+  padding: 30px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-width {
+  flex-basis: 48%;
+}
+
+.full-width {
+  flex-basis: 100%;
+}
+
+.input-label {
+  font-family: "DM Serif Text", serif;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #E45B29;
+}
+
+.input-text {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.input-text:focus {
+  border-color: #E45B29;
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  padding: 8px 12px;
+  background-color: #f2ad8e;
+  color: white;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.input-group .input-text {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+
+.feedback-valid {
+  color: green;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.feedback-invalid {
+  font-family: "DM Serif Text", serif;
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox {
+  margin-right: 10px;
+}
+
+.checkbox-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.btn-submit {
+  font-family: "DM Serif Text", serif;
+  background-color: #E45B29;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #c04d22;
+}
+
+.short-field {
+  flex-basis: 5px; /* Choisis la largeur que tu veux (par ex. 120px, 180px...) */
+  flex-grow: 0;
+}
+
+#signin {
+    width: 662px;
+    height: 500.81px;
+    background-color: #f2ae8ebb;
+    border-radius: 10px;
+    margin: 170px auto;  /* marge en haut/bas = 100px, gauche/droite = auto pour centrer */
+    display: flex;       /* si tu veux que le contenu interne soit en flex */
+    justify-content: center;
+    align-items: center; /* centre verticalement le contenu interne */
+}
+
+#signin .form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+#signin .form-group {
+  flex: 1;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.btn-signin {
+  background-color: transparent;
+  color: white;
+  font-family: "DM Serif Text", serif;
+  padding: 10px 20px;
+  border: 0.5px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-signin:hover {
+  background-color: #ef73458a;
+}
+
+
+
+.btn-signin,
+.btn-signin:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-submit,
+.btn-submit:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/*recipe*/
+
+#first-col-recipe{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-right: 250px;
+}
+
+#recipe-img img{
+  width: 350px;
+  height: 407px;
+}
+
+
+#Steps ul{
+  margin-top: 30px;
+  font-family: "DM Serif Text", serif;
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+#recipe-row{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+}
+
+#second-col-recipe{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+#second-col-recipe h1{
+  font-family: "DM Serif Text", serif;
+  color: #000;
+}
+
+
+#quantity-gestion {
+  margin-top: 15px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 15px;
+  width: fit-content;
+}
+
+.counter button {
+  font-size: 30px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #FADECB;
+  transition: background-color 0.3s;
+}
+
+.counter button:hover {
+  background-color: #f6cfb5;
+}
+
+.counter span {
+  font-size: 20px;
+  min-width: 80px;
+  text-align: center;
+}
+
+
+#ingredients-list {
+  margin-top: 70px;
+  list-style: none;
+  padding: 0;
+  font-family: "DM Serif Text", serif;
+}
+
+#ingredients-list li {
+  padding-bottom: 24px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.rating-stars-group {
+  margin-left: 65px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.rating-stars-group img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.rating-stars-group.read-only img {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+#user-rate h1{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: #c04d22;
+}
+
+
+
+/*statistics page*/
+
+#dashboard {
+  display: flex;
+  gap: 500px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.chart-box {
+
+  text-align: center;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+#barChart {
+  width: 500px;
+  height: 400px;
+}
+
+#pieChart {
+  width: 400px;
+  height: 400px;
+}
+
+
+#dashboard h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #E45B29;
+}
+
+#title-stats {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#title-stats h1 {
+  font-family: "DM Serif Text", serif;
+  color: #E45B29;
+  font-size: 40px;
+}
+
+
+
+#subscription-management {
+  width: 80%;
+  margin: 60px auto;
+  font-family: "DM Serif Text", serif;
+}
+
+#subscription-management h2 {
+  font-size: 28px;
+  color: #E45B29;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#subscription-management table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#subscription-management th, 
+#subscription-management td {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+#subscription-management .active {
+  color: green;
+  font-weight: bold;
+}
+
+#subscription-management .inactive {
+  color: red;
+  font-weight: bold;
+}
+
+#subscription-management button {
+  background-color: #FADECB;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#subscription-management button:hover {
+  background-color: #f6cfb5;
+}
+
+/*modify profile*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay-content h2{
+  font-family: "DM Serif Text", serif;  /* Police */
+  color: #E45B29;  
+}
+
+.overlay-content {
+  background: #FFFFF4;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.overlay-content form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.overlay-content form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #c04d22;
+}
+
+
+
+#profileForm label {
+  font-family: "DM Serif Text", serif;  /* Police */
+  font-size: 16px;                       /* Taille */
+  color: #E45B29;                       /* Couleur */
+  font-weight: 600;                     /* Gras */
+  /* Autres styles si tu veux */
+  cursor: pointer;                     /* Si tu veux que ça ait un curseur pointer */
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end; /* aligne les boutons à droite */
+  gap: 15px;                 /* espace entre les boutons */
+}
+
+.buttons button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Bouton "Save Changes" en orange dégradé */
+.buttons button[type="submit"] {
+  background: linear-gradient(135deg, #E45B29, #F2994A);
+  color: white;
+  box-shadow: 0 4px 8px rgba(228, 91, 41, 0.3);
+}
+.buttons button[type="submit"]:hover {
+  background: linear-gradient(135deg, #F2994A, #E45B29);
+  transform: scale(1.05);
+}
+
+/* Bouton "Cancel" gris clair */
+.buttons button#closeProfileEdit {
+  background-color: #ccc;
+  color: #333;
+}
+.buttons button#closeProfileEdit:hover {
+  background-color: #bbb;
+  transform: scale(1.05);
+}
+.buttons button#closeProfileEdit:active {
+  transform: scale(0.95);
+}
