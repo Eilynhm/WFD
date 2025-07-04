@@ -90,6 +90,22 @@ a {
     justify-content: center;
 }
 
+#hamburger {
+  display: none;
+  font-size: 32px;
+  color: #E45B29;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px 20px;
+}
+
+/* Menu classique sur desktop */
+#topbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 
 #text span{
     display: flex;
@@ -1254,6 +1270,30 @@ canvas {
         justify-content: center;
     }
 
+    #topbar {
+      display: none;          /* nav cachée par défaut */
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  #topbar.active {
+    display: flex;          /* nav visible quand classe active */
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 32px;
+    color: #E45B29;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px 20px;
+  }
+
+    #left-side {
+      margin-left: 0;
+      justify-content: center;
+    }
+
     #text {
         margin-top: 4rem;
         margin-left: 1rem;
@@ -1270,7 +1310,7 @@ canvas {
     }
 
     #second-part {
-      flex-direction: column;
+      flex-direction: row;
       height: auto;
       padding: 2rem 1rem;
       gap: 2rem;
@@ -1278,8 +1318,8 @@ canvas {
   }
 
     #second-part img {
-      width: 90%;
-      height: auto;
+      width: 250px;
+      height: 293px;
     }
 
     #second-part .text-block {
@@ -1288,12 +1328,13 @@ canvas {
     }
 
     #second-part span {
-      font-size: 1.8rem;
+      font-size: 2px !important;
       line-height: 2rem;
     }
 
     #second-part p {
-      font-size: 1.2rem;
+      font-size: 10px !important;
+      margin-top: 0px !important;
     }
 
     .content-rec {
@@ -1307,47 +1348,78 @@ canvas {
       margin: 2rem 0 1rem 0;
     }
 
-    .container {
-      flex-direction: column;
-      gap: 2rem;
-      margin: 0 1rem;
+   .container {
+      display: flex;              /* pour aligner les cartes en ligne */
+      flex-wrap: wrap;            /* pour passer à la ligne si besoin */
+      justify-content: center;    /* centrer les cartes horizontalement */
+      gap: 24px;                  /* espace entre les cartes */
+      padding: 0 16px;
+      align-items: flex-start;    /* aligne cartes en haut */
+      flex-direction: row;
     }
 
-    .card {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-    }
 
-    .card-image {
-      width: 100%;
-      height: auto;
-      margin: 1rem auto 0 auto;
-    }
+.card {
+  position: relative;
+  width: 243px !important;
+  height: 317px !important;
+  background-color: #E0D4C2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 16px;
+  /* Plus besoin de margin: auto ici, on gère espacement avec gap du container */
+}
 
-    .price-text {
-      width: 70%;
-      height: auto;
-      margin: 0.5rem auto;
-      font-size: 0.9rem;
-    }
 
-    .card-title h2 {
-      font-size: 1.5rem;
-      text-align: center;
-    }
+.card-image {
+  width: 170px;
+  height: 188px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0 !important;
+  margin-bottom: 10px;
+}
 
-    .heart {
-      width: 40px;
-      height: 40px;
-      top: 20px;
-      right: 20px;
-    }
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+  .card-title h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 4px 0 8px 0; /* espace vertical */
+}
+
+.price-text {
+  width: 120px;
+  height: 28px;
+  margin: 0 auto 5px auto;
+}
+
+.heart {
+  width: 40px;
+  height: 40px;
+  position: absolute; /* attention, doit être relative à la carte */
+  top: 20px;
+  right: 20px;
+}
+
 
     #third-part {
-      flex-direction: column;
       gap: 1rem;
       padding: 2rem 1rem;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
     }
 
     #third-part .spoon img,
@@ -1355,6 +1427,14 @@ canvas {
       width: 60%;
       max-width: 250px;
       height: auto;
+    }
+
+    #third-part .spoon{
+      margin-left: 0px !important;
+    }
+
+    #third-part .fork{
+      margin-right: 0px !important;
     }
 
     .center-content p {
@@ -1462,9 +1542,7 @@ canvas {
 
   #part1,
   #part2 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
   }
 
   #part2 {
@@ -1479,7 +1557,7 @@ canvas {
 
   .floating-title {
     font-size: 2rem;
-    top: 200px; /* ajusté pour petit écran */
+    top: 180px; /* ajusté pour petit écran */
     padding: 0 1rem;
   }
 
@@ -1494,13 +1572,33 @@ canvas {
     height: auto;
   }
 
+
+
+
+  .kiwi img,
+  .rasberry img,
+  .kale img,
+  .figue img,
+  .chocolate img {
+    width: 100% !important;
+    max-width: 250px;
+    height: auto;
+  }
+  #cen{
+    display: flex;
+    flex-direction: column;
+  }
+
   /* === Barre de recherche flottante === */
   .custom-navbar2 {
-    top: auto;
+    top: 70px;
+    left: 20px;
     position: relative;
     transform: none;
     margin: 2rem auto;
     padding: 0 1rem;
+    margin-left: 0px !important;
+
   }
 
   .custom-search2 {
@@ -1526,14 +1624,19 @@ canvas {
   }
 
   #option-prof {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
-    margin: 2rem 0;
+    margin-left: 20%;
+
   }
 
   #option-prof button,
   #option-prof .btn-link {
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
     font-size: 1rem;
     padding: 0.75rem;
   }
@@ -1563,7 +1666,7 @@ canvas {
     width: 90px;
     height: 90px;
     font-size: 2rem;
-    top: -40px;
+    top: 150px;
   }
 
   #signin .form-group {

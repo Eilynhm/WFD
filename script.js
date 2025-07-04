@@ -1,4 +1,12 @@
 
+
+
+function toggleMenu() {
+    const nav = document.getElementById('topbar');
+    nav.classList.toggle('active');
+  }
+
+
 /*profile page*/
 
 document.addEventListener("DOMContentLoaded", function () {
