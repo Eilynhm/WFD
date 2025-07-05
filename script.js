@@ -2,9 +2,17 @@
 
 
 function toggleMenu() {
-    const nav = document.getElementById('topbar');
-    nav.classList.toggle('active');
-  }
+  const nav = document.getElementById('topbar');
+  const burger = document.getElementById('hamburger');
+  const icon = document.getElementById('burger-icon');
+
+  nav.classList.toggle('active');
+  burger.classList.toggle('active');
+
+  // change l'icône
+  icon.textContent = nav.classList.contains('active') ? '✖' : '☰';
+}
+
 
 
 /*profile page*/
