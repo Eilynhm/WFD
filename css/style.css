@@ -12,6 +12,10 @@ header, nav, main, aside, article, section, footer, div{
 
 body {
     background-color: #FFFFF4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* empêche le scroll horizontal */
+
 }
 
 header {
@@ -410,6 +414,11 @@ footer li{
     margin-left: 32px;
     padding-bottom: 51px;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 
 
 
@@ -589,7 +598,6 @@ footer li{
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #CEAA73;
-    border-right: none;
     border-radius: 4px 0 0 4px;
     outline: none;
   }
@@ -611,7 +619,6 @@ footer li{
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #CEAA73;
-    border-right: none;
     border-radius: 4px 0 0 4px;
     outline: none;
     background-color: #FFFFF4;
@@ -1240,61 +1247,72 @@ canvas {
 
 
 @media (max-width: 768px) {
-    #wrapper {
-        margin: 0 1rem;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        margin: 1rem;
-        text-align: center;
-    }
-
-    #logo {
-        padding-left: 0;
-        height: auto;
-        justify-content: center;
-    }
-
-    #topbar {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        gap: 1.5rem;
-    }
-
-    #left-side {
-        margin-left: 0;
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    #topbar {
-      display: none;          /* nav cachée par défaut */
-      flex-direction: column;
-      gap: 20px;
+  
+   #wrapper {
+      margin: 0 1rem;
   }
 
+  header {
+      flex-direction: row;
+      align-items: center;
+      margin: 1rem;
+      text-align: center;
+      position:relative;
+  }
+
+  #logo {
+      padding-left: 0;
+      height: auto;
+  }
+
+  #logo span{
+    font-size: 20px;
+  }
+
+  #topbar {
+    display: none;              /* caché par défaut */
+    flex-direction: column;
+    align-items: center;        /* centre le contenu horizontalement */
+    justify-content: center;    /* facultatif mais aide si tu veux centrer verticalement aussi */
+    width: 100%;                /* prend toute la largeur */
+    margin: 0;                  /* évite les décalages */
+    gap: 1.5rem;
+    background-color: #FFFFF4;   /* ou autre couleur si besoin */
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* pour un effet visuel sympa */
+    position: absolute;         /* pour le placer par-dessus */
+    top: 100%;                  /* juste sous le header */
+    left: 0;
+    z-index: 9999;
+    
+  }
+
+
+
   #topbar.active {
-    display: flex;          /* nav visible quand classe active */
+      display: flex;               /* affiché si .active est ajoutée par JS */
+  }
+
+  #left-side {
+      margin-left: 0;
+      gap: 1rem;
+      justify-content: center;
   }
 
   #hamburger {
-    display: block;
-    font-size: 32px;
-    color: #E45B29;
-    cursor: pointer;
-    margin-left: auto;
-    padding: 10px 20px;
-    transition: transform 0.3s ease;
+
+      display: block;
+      font-size: 32px;
+      color: #E45B29;
+      cursor: pointer;
+      margin-left: auto;
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
   }
 
   #hamburger.active {
-    transform: rotate(90deg); /* ou 180deg, selon l'effet voulu */
+      transform: rotate(90deg);
   }
-
-
     #left-side {
       margin-left: 0;
       justify-content: center;
@@ -1358,31 +1376,36 @@ canvas {
       display: flex;              /* pour aligner les cartes en ligne */
       flex-wrap: wrap;            /* pour passer à la ligne si besoin */
       justify-content: center;    /* centrer les cartes horizontalement */
-      gap: 24px;                  /* espace entre les cartes */
+      gap: 10px;                  /* espace entre les cartes */
       padding: 0 16px;
       align-items: flex-start;    /* aligne cartes en haut */
       flex-direction: row;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
 
 
 .card {
   position: relative;
-  width: 243px !important;
-  height: 317px !important;
+  width: 180px !important;
+  height: 287px !important;
   background-color: #E0D4C2;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   /* Plus besoin de margin: auto ici, on gère espacement avec gap du container */
 }
 
 
 .card-image {
-  width: 170px;
-  height: 188px;
+  width: 160px;
+  height: 178px;
   margin-top: 15px;
   display: flex;
   justify-content: center;
@@ -1403,7 +1426,7 @@ canvas {
   .card-title h2 {
     font-size: 20px;
     text-align: center;
-    margin: 4px 0 8px 0; /* espace vertical */
+    margin: 2px 0 4px 0; /* espace vertical */
 }
 
 .price-text {
@@ -1528,17 +1551,19 @@ canvas {
 
   /* ===== CONTAINER4 CARDS ===== */
   .container4 {
-    flex-direction: column;
-    gap: 2rem;
-    margin: 1rem;
-    align-items: center;
+    display: flex;              /* pour aligner les cartes en ligne */
+    flex-wrap: wrap;            /* pour passer à la ligne si besoin */
+    justify-content: center;    /* centrer les cartes horizontalement */
+    gap: 10px;                  /* espace entre les cartes */
+    padding: 0 16px;
+    align-items: flex-start;    /* aligne cartes en haut */
+    flex-direction: row;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  .card {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-  }
 
   /* ===== FROM THE FRIDGE ===== */
   #fruity {
@@ -1552,7 +1577,8 @@ canvas {
   }
 
   #part2 {
-    margin-top: 5px;
+    margin-top: 1px;
+
   }
 
   #fruity img {
@@ -1562,12 +1588,12 @@ canvas {
   }
 
   .floating-title {
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
     top: 110px; /* ajusté pour petit écran */
     padding: 0 1rem;
   }
-
-
 
   .kiwi img,
   .rasberry img,
@@ -1591,21 +1617,21 @@ canvas {
 
   /* === Barre de recherche flottante === */
   .custom-navbar2 {
-    top: -15px;
-    left: 25px;
+    display: flex;
+    justify-content: center;
+    top: -5px;
+    left: 10px;
     position: relative;
     transform: none;
-    margin-top: 0px !important;
     margin: 2rem auto;
     padding: 0 1rem;
-    margin-left: 0px !important;
 
   }
 
   .custom-search2 {
     flex-direction: column;
-    width: 100%;
-    max-width: 80%;
+    width: 80%;
+    max-width: 60%;
   }
 
   .custom-search2 input[type="search"] {
@@ -1628,19 +1654,47 @@ canvas {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    margin-left: 20%;
+    margin-top: 20px;
 
   }
+  
 
-  #option-prof button,
   #option-prof .btn-link {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
+  all: unset; /* remet à zéro tous les styles du navigateur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  font-size: 1rem;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: #f2ae8e43; /* à adapter à ton design */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#option-prof button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  font-size: 1rem;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: #f2ae8e43;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
 
   /* === Tabs === */
   .tabs {
@@ -1656,23 +1710,30 @@ canvas {
   /* === Login / Signin === */
   #login,
   #signin {
-    width: 90%;
+    width: 70%;
     height: auto;
-    /*padding: 2rem 1rem;*/
-    /*margin: 0.5rem auto;*/
+    padding: 2rem 1rem;
+
     margin-top: 0px !important;
     flex-direction: column;
   }
 
+  #login .form-container{
+    margin-top: 0px !important;
+  }
+
+  #squarelogin{
+    margin-top: 0px !important;
+    position: relative;
+  }
+
   .prof {
-    margin-bottom: 200px;
   width: 90px;
   height: 90px;
   font-size: 2rem;
-
-  position: relative;  /* important pour activer le z-index */
-  z-index: 10;          /* plus élevé que ton fond */
-
+  top: 2%;
+  position: relative;  /* important pour activer le z-index */          /* plus élevé que ton fond */
+ margin-bottom: 2%;
   /* Si tu veux qu’il reste à sa place normale, n’utilise pas top/left */
 }
 
@@ -1732,7 +1793,7 @@ canvas {
   }
 
   #recipe-img img {
-    width: 80%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -1796,8 +1857,8 @@ canvas {
 
 
   #rating-stars-general img{
-    width: 7%;
-    height: 7%;
+    width: 10%;
+    height: 10%;
     display: flex;
     justify-content: center;
   }
@@ -1814,7 +1875,7 @@ canvas {
   }
 
   #user-rate h1 {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   }
 
@@ -1869,6 +1930,7 @@ canvas {
 
   /* === MODIFIER PROFIL === */
   .overlay-content {
+    
     width: 90%;
     padding: 20px;
   }
@@ -1885,6 +1947,7 @@ canvas {
   .overlay-content form input {
     font-size: 1rem;
     padding: 0.3rem;
+    width: 90%;
   }
 
   .buttons {
