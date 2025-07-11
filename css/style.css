@@ -115,7 +115,7 @@ a {
     display: flex;
     font-family: "DM Serif Text", serif;
     font-size: 48px;
-    color: #E45B29;;
+    color: #E45B29;
     align-items: center;
     justify-content: center;
     margin-bottom: 96px;
@@ -377,7 +377,7 @@ footer ul{
 
 a, a:visited, a:hover, a:link {
     text-decoration: none;
-    color: #d8add3;
+    color: #FFFFF4;
 }
 
 footer li{
@@ -422,9 +422,83 @@ footer li{
   display: none;
 }
 
+#container-mobile{
+  display: none;
+}
+
 
 
 /*RECIPE BOOK PAGE */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #E45B29;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "DM Serif Text", serif;
+  font-weight: 100;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #d35527;;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8vw;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  background-color: #f6f6f6;
+  min-width: 12vw;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-family: "DM Serif Text", serif;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
   .custom-navbar {
     padding: 10px 20px;
     display: flex;
@@ -639,6 +713,8 @@ footer li{
     display: flex;
     justify-content: center;
 }
+
+
 
 #option-prof {
     display: flex;
@@ -928,11 +1004,25 @@ footer li{
 
 /*recipe*/
 
+
+#Steps h2, #quantity-gestion h2{
+  font-family: "DM Serif Text", serif;
+  font-size: 24px;
+  color: #E45B29;
+  font-weight: 200;
+}
+#quantity-gestion h2{
+  margin-top: 30px;
+}
+#Steps h2{
+  margin-bottom: 30px;
+}
+
 #first-col-recipe{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 10px;
   margin-right: 250px;
 }
 
@@ -958,12 +1048,13 @@ footer li{
 #second-col-recipe{
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
-#second-col-recipe h1{
+#first-col-recipe h1{
   font-family: "DM Serif Text", serif;
   color: #000;
+  font-family: 65px;
 }
 
 
@@ -971,14 +1062,16 @@ footer li{
   margin-top: 15px;
 }
 
-.counter {
+.counter { 
+  margin-top: 30px; margin-left: 12%;
   display: flex;
   align-items: center;
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   gap: 15px;
-  width: fit-content;
+  width: fit-content; 
+  justify-content: center;
 }
 
 .counter button {
@@ -1003,7 +1096,7 @@ footer li{
 
 
 #ingredients-list {
-  margin-top: 70px;
+  margin-top: 30px;
   list-style: none;
   padding: 0;
   font-family: "DM Serif Text", serif;
@@ -1038,10 +1131,16 @@ footer li{
 #user-rate h1{
   display: flex;
   justify-content: center;
-  font-size: 30px;
-  color: #c04d22;
+  font-size: 20px;
+  color: #E45B29;
 }
 
+#user-rate{
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
 
 /*statistics page*/
@@ -1337,6 +1436,15 @@ canvas {
         font-size: 1.2rem;
     }
 
+
+
+
+
+
+
+
+
+
     #second-part {
       flex-direction: row;
       height: auto;
@@ -1395,6 +1503,8 @@ canvas {
       padding-right: 0 !important;
     }
 
+
+    
 
 .card {
   position: relative;
@@ -1658,6 +1768,92 @@ canvas {
     padding: 0.3rem;
   }
 
+
+
+
+.dropbtn {
+  background-color: #E45B29;
+  color: white;
+  padding: 3vw; /* adaptatif */
+  font-size: 4vw;
+  border: none;
+  cursor: pointer;
+  border-radius: 1vw;
+  font-family: "DM Serif Text", serif;
+  font-weight: 100;
+  width: 60vw; /* pleine largeur mobile */
+  height: 10vw;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #d35527;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 3vw 3vw;
+  background-repeat: no-repeat;
+  font-size: 4vw;
+  padding: 3vw 4vw 3vw 10vw;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 60vw;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+  outline: 0.5vw solid #ddd;
+}
+
+/* Container div */
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  background-color: #f6f6f6;
+  min-width: 60vw;
+  border: 1px solid #ddd;
+  z-index: 1;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  font-family: "DM Serif Text", serif;
+  color: black;
+  padding: 3vw 4vw;
+  text-decoration: none;
+  display: block;
+  font-size: 3.5vw;
+}
+
+/* On hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show class */
+.show {
+  display: block;
+}
+
+
+
+
+
+
   /* === Profil === */
   #avatar {
     margin-top: 3rem;
@@ -1803,7 +1999,9 @@ canvas {
   /*recipe page*/
 
   #recipe-row {
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 0 1rem;
   }
@@ -1815,12 +2013,14 @@ canvas {
     margin-right: 0;
     
   }
-
-  #recipe-img img {
-    width: 100%;
-    height: auto;
+  #recipe-img{
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  #recipe-img img {
+    width: 80%;
+    height: auto;
   }
 
   #second-col-recipe {
@@ -1829,18 +2029,18 @@ canvas {
   }
 
   #second-col-recipe h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   #Steps ul {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 2rem;
     margin-left: 10px;
   }
 
   #ingredients-list li {
-    font-size: 15px;
+    font-size: 16px;
     padding-bottom: 1rem;
   }
 
@@ -1853,10 +2053,13 @@ canvas {
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   width: fit-content;
+  justify-content: center; 
+ 
+  margin-left: 22%;
 }
 
 .counter button {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.4rem 0.8rem;
   border: none;
   border-radius: 100px;
@@ -1878,11 +2081,14 @@ canvas {
   display: flex;
   justify-content: center;
 }
-
+#rating-stars-general{
+  display: flex;
+  justify-content: center;
+}
 
   #rating-stars-general img{
-    width: 10%;
-    height: 10%;
+    width: 8%;
+    height: 8%;
     display: flex;
     justify-content: center;
   }
@@ -1899,13 +2105,26 @@ canvas {
   }
 
   #user-rate h1 {
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
   }
 
   
   #user-rate{
     margin-bottom: 50px;
+  }
+
+  #Steps h2, #quantity-gestion h2{
+    font-family: "DM Serif Text", serif;
+    font-size: 20px;
+    color: #E45B29;
+    font-weight: 200;
+  }
+  #quantity-gestion h2{
+    margin-top: 30px;
+  }
+  #Steps h2{
+    margin-bottom: 30px;
   }
 
   /* === STATISTICS PAGE === */

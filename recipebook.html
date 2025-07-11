@@ -8,7 +8,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
             
-            <title>FLOWSHOP - Main </title>
+            <title>WHAT'S FOR DINNER - recipe book</title>
         </head>
         <body>
             <header>
@@ -43,6 +43,18 @@
                         <button type="submit">Search</button>
                     </form>
                 </nav>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Filter Categories</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <a href="#about">Gluten free</a>
+                        <a href="#base">Dairy free</a>
+                        <a href="#blog">Sugar free</a>
+                        <a href="#contact">Vegan</a>
+                        <a href="#custom">Dessert</a>
+                        <a href="#support">Dinner</a>
+                    </div>
+                </div>
                 <!--container 1-->
                 <section class="container4">
                     <!--card 1-->
@@ -286,9 +298,9 @@
                     <section id="first-foot">
                         <h1>WHO WE ARE</h1>
                         <ul>
-                            <li>About</li>
-                            <li>Team</li>
-                            <li>Work with us</li>
+                            <li><a href="profile.html">Your profile</a></li>
+                            <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+                            <li><a href="recipebook.html">Recipes book</a></li>
                         </ul>
                     </section>
 
